@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+}
+
+.title {
+  margin: 0;
+  font-size: 500%;
+}
+
+.card-grid {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.end-game {
+  padding: 8px;
+  border-radius: 30px;
+  background-color: beige;
+  color: black;
+  font-size: 500%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 10px black;
+}

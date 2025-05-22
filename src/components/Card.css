@@ -1,0 +1,19 @@
+.card {
+  border: solid light-dark(gray, black) 1px;
+  background-color: light-dark(white, gray);
+  padding: 12px;
+  margin: 8px;
+}
+
+.image {
+  width: 180px;
+}
+
+.image.open {
+  opacity: 100%;
+  transition: all 2s;
+}
+
+.image.closed {
+  opacity: 0%;
+}
