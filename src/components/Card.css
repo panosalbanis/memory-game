@@ -3,6 +3,7 @@
   background-color: light-dark(white, gray);
   padding: 12px;
   margin: 8px;
+  border-radius: 30px;
 }
 
 .image {
