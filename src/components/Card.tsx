@@ -10,23 +10,14 @@ type PropsType = {
   open: boolean;
 };
 
-const getClickHandler = (
-  cardClickedHandler: CardClickedHandler,
-  cardId: number,
-  animalId: number
-) => {
-  return (e: SyntheticEvent<HTMLDivElement>) => {
+function Card({ cardId, animalId, cardClickedHandler, open }: PropsType) {
+  const clickHandler = (e: SyntheticEvent<HTMLDivElement>) => {
     e.preventDefault();
     cardClickedHandler(animalId, cardId);
   };
-};
 
-function Card({ cardId, animalId, cardClickedHandler, open }: PropsType) {
   return (
-    <div
-      className="card"
-      onClick={getClickHandler(cardClickedHandler, cardId, animalId)}
-    >
+    <div className="card" onClick={clickHandler}>
       <img
         className={`image ${open ? 'open' : 'closed'}`}
         src={`src/assets/${animalId}.png`}
