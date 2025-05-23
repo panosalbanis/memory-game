@@ -5,6 +5,7 @@
 .title {
   margin: 0;
   font-size: 500%;
+  color: light-dark(black, gray);
 }
 
 .card-grid {
@@ -30,4 +31,5 @@
 .end-game-message {
   font-size: 500%;
   margin: 0px;
+  color: light-dark(black, gray);
 }
