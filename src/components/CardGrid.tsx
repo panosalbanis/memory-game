@@ -31,9 +31,14 @@ function CardGrid() {
     cardId: 0,
   });
 
+  const [canPlay, setCanPlay] = useState(true);
+
   const newGameHandler = () => setGridState(initialState);
 
   const clickHandler = (animalId: number, cardId: number) => {
+    if (!canPlay) {
+      return;
+    }
     setGridState(
       gridState.map((cardState) =>
         cardState.cardId === cardId ? { ...cardState, open: true } : cardState
@@ -48,6 +53,7 @@ function CardGrid() {
       setCurrentOpenCard({ animalId: 0, cardId: 0 });
       return;
     } else {
+      setCanPlay(false);
       setTimeout(() => {
         setGridState(
           gridState.map((cardState) =>
@@ -58,6 +64,7 @@ function CardGrid() {
           )
         );
         setCurrentOpenCard({ animalId: 0, cardId: 0 });
+        setCanPlay(true);
       }, 1000);
     }
   };
