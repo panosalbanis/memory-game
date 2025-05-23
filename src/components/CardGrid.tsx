@@ -26,7 +26,7 @@ const initialState = [
 function CardGrid() {
   const [gridState, setGridState] = useState(initialState);
 
-  const [currentOpenCard, setCurrentOpenCard] = useState({
+  const [currentOpenCard, setCurrentOpenCard] = useState<Card>({
     animalId: 0,
     cardId: 0,
   });
